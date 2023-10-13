@@ -1,262 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>24K</title>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../../css/main.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header id="header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#"><i class="fa-solid fa-store"></i>SHOPPING</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/index.html"><i class="fa fa-user"></i>Home
-                                <span class="sr-only">(current)</span></a>
+    <header>
+        <div class="container">
+            <div class="header_content">
+                <div class="header_logo">
+                    <a href="#">CyperPNJ</a>
+                </div>
+                <div class="header_nav">
+                    <ul>
+                        <li><a href="./Customer/view/shopping.html"><i class="fa-solid fa-bag-shopping"></i>Customer</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../admin/view/shop.html"><i
-                                    class="fa fa-shopping-bag"></i>Admin</a>
-                        </li>
+                        <li><a href="#"> <i class="fa-solid fa-user"></i>Admin</a></li>
                     </ul>
                 </div>
-
-                <!-- Giỏ hàng -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#shop">
-                    <i class="fa fa-shopping-cart"></i>
-                </button>
-                <!-- Giỏ hàng -->
-
-                <!-- Model giỏ hàng -->
-                <div class="modal fade" id="shop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">GIỎ HÀNG</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div id="cart" class="modal-body">
-                                <p>Hiện chưa có sản phẩm trong giỏ hàng</p>
-                            </div>
-                            <div class="modal-footer">
-                                <div id="totalPrice" class="total price"></div>
-                                <div>
-                                    <button class="btn btn-success" id="thanhToan">
-                                        THANH TOÁN
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Model giỏ hàng -->
-            </nav>
-        </header>
-        <!-- End Header -->
-
-        <!-- Search -->
-        <div class="col-md-12 mt-4 mb-4">
-            <div class="input-group mb-3">
-                <input id="txtSearch" type="text" class="form-control" placeholder="Nhập từ khóa"
-                    aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                <div class="input-group-append">
-                    <span class="input-group-text" id="basic-addon2" onclick="">
-                        <i class="fa fa-search"></i>
-                    </span>
-                </div>
-                <select id="productSelect">
-                    <option value="active">Chọn loại sản phẩm</option>
-                    <option onchange="onProductSelectChange()" class="type" value="Vàng">
-                        Vàng
-                    </option>
-                    <option onchange="onProductSelectChange()" class="type" value="Bạc">
-                        Bạc
-                    </option>
-                </select>
             </div>
         </div>
-        <!-- Search -->
-
-        <!-- BEGIN PRODUCT -->
-        <section class="products">
-            <div class="container">
-                <div class="product_title">
-                    <h2>-Featured Products-</h2>
-                </div>
-                <div class="product_content">
-                    <div class="product_item" id="product_item">
-                        <img src="./img/day-chuyen-nam-vang-trang-y-18k-pnj-01.png" alt="">
-                        <div class="item_title">
-                            <h3>CyberPhone</h3>
-                            <span>$99.99</span>
-                        </div>
-                        <p class="sub_title">Accessories</p>
-                        <div class="product_action">
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <button class="buy_now">Buy Now</button>
-                        </div>
-                    </div>
-
-                    <div class="product_item">
-                        <img src="./img/day-chuyen-vang-y-18k-pnj-1.png" alt="">
-                        <div class="item_title">
-                            <h3>CyberPhone</h3>
-                            <span>$99.99</span>
-                        </div>
-                        <p class="sub_title">Accessories</p>
-                        <div class="product_action">
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <button class="buy_now">Buy Now</button>
-                        </div>
-                    </div>
-
-                    <div class="product_item">
-                        <img src="./img/bong-tai-cuoi-pnj-duyen-phuong-tinh-hong-vang-24k.png" alt="">
-                        <div class="item_title">
-                            <h3>CyberPhone</h3>
-                            <span>$99.99</span>
-                        </div>
-                        <p class="sub_title">Accessories</p>
-                        <div class="product_action">
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <button class="buy_now">Buy Now</button>
-                        </div>
-                    </div>
-
-                    <div class="product_item">
-                        <img src="./img/nhan-pnj-duyen-phuong-tinh-hong-vang-24k-1.png" alt="">
-                        <div class="item_title">
-                            <h3>CyberPhone</h3>
-                            <span>$99.99</span>
-                        </div>
-                        <p class="sub_title">Accessories</p>
-                        <div class="product_action">
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <button class="buy_now">Buy Now</button>
-                        </div>
-                    </div>
-
-                    <div class="product_item">
-                        <img src="./img/lac-tay-kim-cuong-vang-trang-14k-pnj-1.png" alt="">
-                        <div class="item_title">
-                            <h3>CyberPhone</h3>
-                            <span>$99.99</span>
-                        </div>
-                        <p class="sub_title">Accessories</p>
-                        <div class="product_action">
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <button class="buy_now">Buy Now</button>
-                        </div>
-                    </div>
+    </header>
 
 
-                    <div class="product_item">
-                        <img src="./img/sp-GC0000Y000038-day-co-cuoi-vang-24k-pnj-duyen-phuong-tinh-hong-1.png" alt="">
-                        <div class="item_title">
-                            <h3>CyberPhone</h3>
-                            <span>$99.99</span>
-                        </div>
-                        <p class="sub_title">Accessories</p>
-                        <div class="product_action">
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <button class="buy_now">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <style>
-            #container {
-                min-width: 310px;
-                max-width: 800px;
-                height: 400px;
-                margin: 0 auto;
-            }
-        </style>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
 
-        <!-- AXIOS -->
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <!-- END-AXIOS -->
-
-        <!-- sweet-alert -->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
-        <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.min.css" rel="stylesheet" />
-
-        <script src="../model/customersproduct.js"></script>
-        <script src="../service/customersproduct.js"></script>
-        <script src="../controller/customershop.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
