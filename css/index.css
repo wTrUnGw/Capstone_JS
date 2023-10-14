@@ -15,6 +15,78 @@
   font-family: "Montserrat", sans-serif;
 }
 
+#exampleModal.modal.show {
+  position: fixed;
+  padding-right: 0px !important;
+  top: 10px;
+  right: 10px;
+  bottom: initial;
+  left: initial;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+}
+
+#exampleModal.modal.fade {
+  position: fixed;
+  padding-right: 0px !important;
+  top: 10px;
+  right: 10px;
+  bottom: initial;
+  left: initial;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+}
+
+#exampleModal .modal-dialog {
+  width: 400px;
+}
+
+#exampleModal .modal-footer {
+  display: block;
+  justify-content: initial;
+}
+
+#exampleModal .modal-body .cart_item {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#exampleModal .modal-body .cart_item img {
+  width: 50px;
+  height: 50px;
+}
+#exampleModal .modal-body .cart_item_info p {
+  margin: 0 0 0 5px;
+}
+#exampleModal .modal-body .cart_item_buttons {
+  position: absolute;
+  right: 0;
+}
+#exampleModal .modal-body .cart_item_buttons i {
+  color: white;
+}
+#exampleModal .modal-body .cart_item_buttons button {
+  transition: all 0.5s;
+  width: 35px;
+  background-color: orange;
+}
+#exampleModal .modal-body .cart_item_buttons button:nth-child(1) {
+  background-color: green;
+}
+#exampleModal .modal-body .cart_item_buttons button:nth-child(2) {
+  background-color: blue;
+}
+#exampleModal .modal-body .cart_item_buttons button:nth-child(3) {
+  background-color: red;
+}
+#exampleModal .modal-body .cart_item_buttons button:hover {
+  background-color: black;
+}
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -172,14 +244,4 @@ header .header_content .header_nav li.active a::before {
 }
 .footer .row .nav-link:hover {
   opacity: 0.75;
-}
-
-.dark header {
-  background-color: black;
-  color: white;
-}
-.dark header .header_content .header_nav ul li a {
-  font-size: 16px;
-  font-weight: 400;
-  color: #ffffff;
 }/*# sourceMappingURL=index.css.map */
