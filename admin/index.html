@@ -15,51 +15,12 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
 
   <body>
     <div class="container">
-      <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler d-lg-none"
-          type="button"
-          data-toggle="collapse"
-          data-target="#collapsibleNavId"
-          aria-controls="collapsibleNavId"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        ></button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"
-                >Home <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="dropdownId"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Dropdown</a
-              >
-              <div class="dropdown-menu" aria-labelledby="dropdownId">
-                <a class="dropdown-item" href="#">Action 1</a>
-                <a class="dropdown-item" href="#">Action 2</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <header class="display-4 my-4">Thực hành javascript - axios</header>
+      <header class="display-4 my-4 text-center">Trang Quản Trị</header>
       <!-- Phan tab menu -->
       <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
@@ -154,6 +115,7 @@
                   class="form-control"
                   placeholder="Nhập vào tên sản phẩm"
                 />
+                <span id="spanTen" class="text-danger"></span>
               </div>
               <div class="form-group">
                 <label>Giá</label>
@@ -162,6 +124,7 @@
                   class="form-control"
                   placeholder="Nhập vào giá"
                 />
+                <span id="spanGia" class="text-danger"></span>
               </div>
               <div class="form-group">
                 <label>Hình Ảnh</label>
@@ -170,6 +133,7 @@
                   class="form-control"
                   placeholder="Nhập vào hình sản phẩm"
                 />
+                <span id="spanAnh" class="text-danger"></span>
               </div>
               <div class="form-group">
                 <label>Chất Liệu</label>
@@ -178,6 +142,7 @@
                   class="form-control"
                   placeholder="Nhập vào chất liệu sản phẩm"
                 />
+                <span id="spanChatLieu" class="text-danger"></span>
               </div>
               <div class="form-group">
                 <label for="">Mô tả : </label>
@@ -188,6 +153,7 @@
                   cols="30"
                   rows="10"
                 ></textarea>
+                <span id="spanMoTa" class="text-danger"></span>
               </div>
             </div>
             <!-- Modal footer -->
@@ -230,6 +196,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="./validation.js"></script>
 
     <script src="./product.js"></script>
     <script src="./producapi.js"></script>
