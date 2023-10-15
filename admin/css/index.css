@@ -21,7 +21,7 @@
 }
 
 header {
-  background-color: #0000ff75;
+  background-color: #f5f9fe;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 20px 0;
   position: relative;
@@ -182,4 +182,4 @@ header .header_content .header_nav li.active a::before {
   font-size: 16px;
   font-weight: 400;
   color: #ffffff;
-} /*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

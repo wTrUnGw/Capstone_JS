@@ -169,6 +169,11 @@ header .header_content .header_nav li.active a::before {
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
+@media screen and (max-width: 576px) {
+  .products .product_content {
+    grid-template-columns: 1fr;
+  }
+}
 .products .product_content img {
   width: 100%;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
