@@ -119,7 +119,18 @@ function addProduct() {
   var moTa = getEle("MoTa").value;
   var product = new Product("", tenSP, gia, hinhAnh, chatLieu, moTa);
   var promise = api.addProductApi(product);
-  kiemTraRong(tenSP, "spanTen");
+  var isValid = true;
+  isValid &= kiemTraRong(tenSP, "spanTen", "Vui lòng không để trống");
+  isValid &=
+    kiemTraSo(gia, "spanGia", "vui lòng nhập số") &&
+    kiemTraRong(gia, "spanAnh", "Vui lòng không để trống");
+  isValid &= kiemTraRong(hinhAnh, "spanAnh", "Vui lòng không để trống");
+  isValid &= kiemTraRong(chatLieu, "spanChatLieu", "Vui lòng không để trống");
+  isValid &= kiemTraRong(moTa, "spanMoTa", "Vui lòng không để trống");
+
+  if (!isValid) {
+    return null;
+  }
 
   promise
     .then(function (result) {
