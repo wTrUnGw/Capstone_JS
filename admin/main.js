@@ -119,6 +119,7 @@ function addProduct() {
   var moTa = getEle("MoTa").value;
   var product = new Product("", tenSP, gia, hinhAnh, chatLieu, moTa);
   var promise = api.addProductApi(product);
+  kiemTraRong(tenSP, "spanTen");
 
   promise
     .then(function (result) {
