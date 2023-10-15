@@ -1,5 +1,6 @@
-function kiemTraRong(value) {
+function kiemTraRong(value, idCanhBao) {
   if (value == "") {
-    console.log("input rỗng");
+    document.getElementById(idCanhBao).innerHTML = "Vui lòng không để trống";
+  } else {
   }
 }
