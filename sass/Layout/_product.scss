@@ -5,6 +5,11 @@
     text-align: center;
     padding-bottom: 50px;
   }
+  #txtSearch {
+    @media screen and (max-width: 576px) {
+      display: block;
+    }
+  }
 
   .product_content {
     display: grid;
