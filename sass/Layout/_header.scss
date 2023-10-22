@@ -13,7 +13,7 @@ header {
         @include styleText($logo_fs_1, bold, $blue_color_1);
       }
     }
-    .header_nav {
+    .navbar-expand-lg {
       display: flex;
       align-items: center;
       ul {

@@ -109,32 +109,32 @@ header .header_content .header_logo a {
   font-weight: bold;
   color: #2a72dc;
 }
-header .header_content .header_nav {
+header .header_content .navbar-expand-lg {
   display: flex;
   align-items: center;
 }
-header .header_content .header_nav ul {
+header .header_content .navbar-expand-lg ul {
   list-style: none;
 }
-header .header_content .header_nav .btnTheme {
+header .header_content .navbar-expand-lg .btnTheme {
   margin-left: 10px;
   font-size: 24px;
 }
-header .header_content .header_nav .btnTheme i:last-child {
+header .header_content .navbar-expand-lg .btnTheme i:last-child {
   display: none;
 }
-header .header_content .header_nav li {
+header .header_content .navbar-expand-lg li {
   display: inline-block;
   margin: 0 10px;
 }
-header .header_content .header_nav li a {
+header .header_content .navbar-expand-lg li a {
   text-decoration: none;
   font-size: 16px;
   font-weight: 700;
   color: #1d355e;
   position: relative;
 }
-header .header_content .header_nav li a::before {
+header .header_content .navbar-expand-lg li a::before {
   content: "";
   width: 0;
   height: 3px;
@@ -144,13 +144,13 @@ header .header_content .header_nav li a::before {
   left: 0;
   transition: all 0.5s;
 }
-header .header_content .header_nav li a:hover::before {
+header .header_content .navbar-expand-lg li a:hover::before {
   width: 100%;
 }
-header .header_content .header_nav li.active a {
+header .header_content .navbar-expand-lg li.active a {
   color: #2a72dc;
 }
-header .header_content .header_nav li.active a::before {
+header .header_content .navbar-expand-lg li.active a::before {
   width: 100%;
 }
 
@@ -163,6 +163,11 @@ header .header_content .header_nav li.active a::before {
   color: #1d355e;
   text-align: center;
   padding-bottom: 50px;
+}
+@media screen and (max-width: 576px) {
+  .products #txtSearch {
+    display: block;
+  }
 }
 .products .product_content {
   display: grid;
